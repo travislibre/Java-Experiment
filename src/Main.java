@@ -1,3 +1,5 @@
+import java.io.IOException;
+
 public class Main {
     public static void main(String[] args){
         try{
@@ -18,6 +20,13 @@ public class Main {
             System.out.println(e.getMessage());
         }
 
-
+        try{
+            Question3 test = new Question3();
+            test.writeArray("test.dat", new int[]{1,2,3,4,5});
+            test.readArray("test.dat", new int[5]);
+        }
+        catch (IOException e){
+            System.out.println(e.getMessage());
+        }
     }
 }
